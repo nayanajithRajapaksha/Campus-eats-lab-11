@@ -1,0 +1,38 @@
+# Frontend dependencies and output
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# .NET output
+**/bin/
+**/obj/
+*.user
+*.suo
+*.userosscache
+
+# Environment and secret files (keep examples)
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+appsettings.Local.json
+appsettings.*.Local.json
+
+# IDE and operating system files
+.vs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and coverage
+*.log
+coverage/
+TestResults/
+
+# Local setup data and package caches
+.local/
+.nuget/
+frontend/.npm-cache/
