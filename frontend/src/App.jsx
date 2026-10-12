@@ -117,27 +117,29 @@ function FoodArt({ item }) {
 
 function Header({ cartCount, onCart, onHome, onMenu, onOrders, onAccount, user }) {
   return (
-    <header className="site-header">
-      <button className="brand" type="button" onClick={onHome} aria-label="CampusEats home">
-        <BrandMark />
-        <span>CampusEats</span>
-      </button>
-      <nav aria-label="Primary navigation">
-        <button type="button" onClick={onMenu}>Menu</button>
-        <button type="button" onClick={onOrders}>My Orders</button>
-      </nav>
-      <div className="header-actions">
-        <button className="account-button" type="button" onClick={onAccount}>
-          <Icon name="user" size={18} />
-          <span>{user ? user.name.split(' ')[0] : 'Sign in'}</span>
+    <div className="site-header-bar">
+      <header className="site-header">
+        <button className="brand" type="button" onClick={onHome} aria-label="CampusEats home">
+          <BrandMark />
+          <span>CampusEats</span>
         </button>
-        <button className="cart-button" type="button" onClick={onCart} aria-label={`Open cart with ${cartCount} items`}>
-          <Icon name="bag" size={21} />
-          <span className="cart-label">Cart</span>
-          <span className="cart-count">{cartCount}</span>
-        </button>
-      </div>
-    </header>
+        <nav aria-label="Primary navigation">
+          <button type="button" onClick={onMenu}>Menu</button>
+          <button type="button" onClick={onOrders}>My Orders</button>
+        </nav>
+        <div className="header-actions">
+          <button className="account-button" type="button" onClick={onAccount}>
+            <Icon name="user" size={18} />
+            <span>{user ? user.name.split(' ')[0] : 'Sign in'}</span>
+          </button>
+          <button className="cart-button" type="button" onClick={onCart} aria-label={`Open cart with ${cartCount} items`}>
+            <Icon name="bag" size={21} />
+            <span className="cart-label">Cart</span>
+            <span className="cart-count">{cartCount}</span>
+          </button>
+        </div>
+      </header>
+    </div>
   )
 }
 

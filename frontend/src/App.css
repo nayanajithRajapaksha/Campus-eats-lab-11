@@ -1,5 +1,14 @@
-.app-shell { min-height: 100vh; overflow: hidden; }
+.app-shell { min-height: 100vh; overflow: clip; }
 .site-header, main, footer { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+
+.site-header-bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 4px 16px rgba(37, 55, 42, .06);
+}
 
 .site-header {
   min-height: 82px;
@@ -130,7 +139,7 @@
 .benefit-strip strong { font-size: .98rem; }
 .benefit-strip span { margin-top: 5px; color: rgba(255,255,255,.68); font-size: .82rem; }
 
-.menu-section { padding-bottom: 120px; scroll-margin-top: 30px; }
+.menu-section { padding-bottom: 120px; scroll-margin-top: 104px; }
 .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 34px; }
 .section-heading h2 { margin: 9px 0 0; font: 700 clamp(2.4rem, 5vw, 3.8rem)/1 Georgia, serif; letter-spacing: -.045em; color: var(--green-dark); }
 .section-heading > p { max-width: 410px; color: var(--ink-soft); line-height: 1.65; }
@@ -289,7 +298,7 @@ footer > span { justify-self: end; }
   .menu-grid { grid-template-columns: 1fr; }
   .menu-card p { min-height: 0; }
   .food-art svg { max-height: 250px; }
-  .menu-section { padding-bottom: 85px; }
+  .menu-section { padding-bottom: 85px; scroll-margin-top: 134px; }
   .auth-modal { padding: 30px 22px; }
   .orders-page { padding-top: 55px; }
   footer { grid-template-columns: 1fr; justify-items: center; padding: 30px 0; gap: 10px; }
