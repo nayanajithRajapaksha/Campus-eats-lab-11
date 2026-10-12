@@ -112,6 +112,14 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
+if (builder.Configuration.GetValue<bool>("Database:MigrateOnStartup"))
+{
+    await using var scope = app.Services.CreateAsyncScope();
+    var context = scope.ServiceProvider.GetRequiredService<CampusEatsDbContext>();
+    app.Logger.LogInformation("Applying database migrations before accepting requests.");
+    await context.Database.MigrateAsync();
+}
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

@@ -2,6 +2,10 @@
 
 React/Vite frontend with a .NET 8 API and PostgreSQL database.
 
+## Deploy on Render
+
+Follow [the Render deployment guide](docs/render-deployment.md) to create a PostgreSQL database, a Docker Web Service for the API, and a Static Site for the frontend.
+
 ## Local setup on Windows
 
 Prerequisites: Node.js 22.12+ (or Node.js 24), .NET 8 SDK or later with the .NET 8 runtime, and installed PostgreSQL binaries.
